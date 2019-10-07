@@ -14,7 +14,7 @@ def import_search(file_name):
         - file_name (str): filename to be read
     Outputs:
         - (tuple): tuple of tuples, where the inner tuples are lists
-                   of the values in each row
+                of the values in each row
 
     YOU DON'T NEED TO TOUCH THIS FUNCTION
     """
@@ -36,14 +36,14 @@ def get_potential_word(start_loc, direction, length, search_tuple):
     Inputs:
         - start_loc (tuple of 2 ints): row and column index where the word starts
         - direction (str): Capitalized first letter corresponding to forward,
-                           backward, up, or down
+                backward, up, or down
         - length (int): length of the potential word to be searched
         - search_tuple (tuple of (tuple of str)): the data that makes up the word
-                                                  search area.
+                search area.
     Outputs:
         - (str): the word starting at the desired point and extending for length
-                 in the direction requested. If close to the borders so that the
-                 desired word goes out-of-bounds, None should be returned.
+                in the direction requested. If close to the borders so that the
+                desired word goes out-of-bounds, None should be returned.
 
     Usage:
         >>> get_potential_word((0,0), 'F', 4, S)
@@ -68,7 +68,7 @@ def locate_word(search_tuple, word):
     Outputs:
         - location (tuple of 2 int): the row and column of the found word
         - direction (str): the direction of the found word ('forwards', 'backwards',
-                           'up' or 'down')
+                'up' or 'down')
 
     Usage:
         >>> locate_word(S, 'python')
@@ -87,9 +87,9 @@ def main(wordlist, file_name = 'Search.txt'):
     
     Inputs:
         - file_name (str): Filename of txt file containing wordsearch letters.
-                           Defaults to 'Search.txt'
+                Defaults to 'Search.txt'
         - wordlist (tuple of strings): Tuple of the words that the user wishes
-                                       to find within the wordsearch.
+                to find within the wordsearch.
 
     Outputs:
         - Results should be written to the file 'words.txt'
